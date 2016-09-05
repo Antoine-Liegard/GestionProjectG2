@@ -5,7 +5,10 @@
  */
 package functionUtils;
 
+import java.util.*;
 import java.io.IOException;
+import java.io.*;
+import java.util.Arrays;
 
 /**
  *
@@ -14,7 +17,7 @@ import java.io.IOException;
 public class InToPost {
    private Stack theStack;
    private String input;
-   private String output = "";
+   String output = "";
    public InToPost(String in) {
       input = in;
       int stackSize = input.length();
@@ -46,7 +49,15 @@ public class InToPost {
       while (!theStack.isEmpty()) {
          output = output + theStack.pop();
       }
-      System.out.println(output);
+      
+      String array[] = output.split("");
+      String liste2[] = null;
+      
+      for (int i = 0;i< array.length;i++) {
+          liste2[i] = array[0];
+          array = Arrays.copyOfRange(array,1,array.length);
+      }
+      
       return output; 
    }
    public void gotOper(char opThis, int prec1) {
@@ -81,14 +92,6 @@ public class InToPost {
          output = output + chx; 
       }
    }
-   public static void main(String[] args) 
-   throws IOException {
-      String input = "1+2*4/5-7+3/6";
-      String output;
-      InToPost theTrans = new InToPost(input);
-      output = theTrans.doTrans(); 
-      System.out.println("Postfix is " + output + '\n');
-   }
    class Stack {
       private int maxSize;
       private char[] stackArray;
@@ -98,6 +101,10 @@ public class InToPost {
          stackArray = new char[maxSize];
          top = -1;
       }
+
+        private Stack() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
       public void push(char j) {
          stackArray[++top] = j;
       }
@@ -110,5 +117,13 @@ public class InToPost {
       public boolean isEmpty() {
          return (top == -1);
      }
+
+        private void push(String lol) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private int size() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
    }
 }
