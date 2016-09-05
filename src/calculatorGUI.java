@@ -8,6 +8,7 @@
  *
  * @author Kevin
  */
+
 public class calculatorGUI extends javax.swing.JFrame {
 
     /**
@@ -109,7 +110,7 @@ public class calculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_moinActionPerformed
 
     private void egalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_egalActionPerformed
-        String calcul = operation.getText(); 
+
     }//GEN-LAST:event_egalActionPerformed
 
     /**
