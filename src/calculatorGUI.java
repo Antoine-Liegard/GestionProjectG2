@@ -1,3 +1,6 @@
+
+import functionUtils.InToPost;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -26,21 +29,140 @@ public class calculatorGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        moins = new javax.swing.JButton();
+        plus = new javax.swing.JButton();
+        multip = new javax.swing.JButton();
+        divise = new javax.swing.JButton();
+        operation = new javax.swing.JTextField();
+        result = new javax.swing.JTextField();
+        egal = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        moins.setText("-");
+        moins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moinsActionPerformed(evt);
+            }
+        });
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+        plus.setText("+");
+        plus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                plusActionPerformed(evt);
+            }
+        });
+
+        multip.setText("*");
+        multip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multipActionPerformed(evt);
+            }
+        });
+
+        divise.setText("\\");
+            divise.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    diviseActionPerformed(evt);
+                }
+            });
+
+            result.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    resultActionPerformed(evt);
+                }
+            });
+
+            egal.setText("=");
+            egal.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    egalActionPerformed(evt);
+                }
+            });
+
+            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+            getContentPane().setLayout(layout);
+            layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(multip)
+                            .addGap(67, 67, 67))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(divise)
+                            .addGap(66, 66, 66))))
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(72, 72, 72)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(plus)
+                                    .addComponent(moins))
+                                .addGap(93, 93, 93)
+                                .addComponent(egal)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addComponent(operation, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(137, Short.MAX_VALUE))
+            );
+            layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(33, 33, 33)
+                            .addComponent(operation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(59, 59, 59)
+                            .addComponent(plus)
+                            .addGap(40, 40, 40))
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(multip)
+                            .addGap(55, 55, 55)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(egal)
+                            .addComponent(moins))
+                        .addComponent(divise))
+                    .addContainerGap(64, Short.MAX_VALUE))
+            );
+
+            pack();
+        }// </editor-fold>//GEN-END:initComponents
+
+    private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
+        operation.setText(operation.getText() + "+");
+    }//GEN-LAST:event_plusActionPerformed
+
+    private void egalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_egalActionPerformed
+        String input = operation.getText();
+        String output;
+        InToPost theTrans = new InToPost(input);
+        output = theTrans.doTrans(); 
+        result.setText(output);
+    }//GEN-LAST:event_egalActionPerformed
+
+    private void moinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moinsActionPerformed
+        operation.setText(operation.getText() + "-");
+    }//GEN-LAST:event_moinsActionPerformed
+
+    private void multipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multipActionPerformed
+        operation.setText(operation.getText() + "*");
+    }//GEN-LAST:event_multipActionPerformed
+
+    private void diviseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diviseActionPerformed
+        operation.setText(operation.getText() + "/");
+    }//GEN-LAST:event_diviseActionPerformed
+
+    private void resultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resultActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +200,12 @@ public class calculatorGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton divise;
+    private javax.swing.JButton egal;
+    private javax.swing.JButton moins;
+    private javax.swing.JButton multip;
+    private javax.swing.JTextField operation;
+    private javax.swing.JButton plus;
+    private javax.swing.JTextField result;
     // End of variables declaration//GEN-END:variables
 }
