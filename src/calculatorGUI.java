@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -12,14 +13,19 @@ import javax.swing.JButton;
  * @author Kevin
  */
 public class calculatorGUI extends javax.swing.JFrame {
-
-
+    //calculatorGUI.getContentPane().setBackground(Color.white);
+ 
     /**
      * Creates new form calculatorGUI
      */
     public calculatorGUI() {
         initComponents();
+        this.getContentPane().setBackground(Color.white);
+       
 
+                            
+                  
+          
     }
 
     /**
@@ -31,6 +37,7 @@ public class calculatorGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
         sept = new javax.swing.JButton();
         huit = new javax.swing.JButton();
         neuf = new javax.swing.JButton();
@@ -48,11 +55,25 @@ public class calculatorGUI extends javax.swing.JFrame {
         diviser = new javax.swing.JButton();
         egal = new javax.swing.JButton();
         resultat = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setFocusableWindowState(false);
+        setForeground(new java.awt.Color(255, 204, 153));
+        setIconImages(null);
+        setMaximumSize(new java.awt.Dimension(155, 212));
         setResizable(false);
-        setSize(new java.awt.Dimension(155, 212));
+        setSize(new java.awt.Dimension(165, 220));
 
+        sept.setBackground(new java.awt.Color(189, 216, 252));
+        sept.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        sept.setForeground(new java.awt.Color(32, 105, 201));
         sept.setText("7");
         sept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +81,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        huit.setBackground(new java.awt.Color(189, 216, 252));
+        huit.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        huit.setForeground(new java.awt.Color(32, 105, 201));
         huit.setText("8");
         huit.setPreferredSize(new java.awt.Dimension(41, 23));
         huit.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +92,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        neuf.setBackground(new java.awt.Color(189, 216, 252));
+        neuf.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        neuf.setForeground(new java.awt.Color(32, 105, 201));
         neuf.setText("9");
         neuf.setPreferredSize(new java.awt.Dimension(41, 23));
         neuf.addActionListener(new java.awt.event.ActionListener() {
@@ -76,6 +103,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        quatre.setBackground(new java.awt.Color(189, 216, 252));
+        quatre.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        quatre.setForeground(new java.awt.Color(32, 105, 201));
         quatre.setText("4");
         quatre.setPreferredSize(new java.awt.Dimension(41, 25));
         quatre.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +114,14 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        operation.setBackground(new java.awt.Color(189, 216, 252));
+        operation.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        operation.setForeground(new java.awt.Color(32, 105, 201));
+        operation.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(189, 216, 252)));
+
+        cinq.setBackground(new java.awt.Color(189, 216, 252));
+        cinq.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        cinq.setForeground(new java.awt.Color(32, 105, 201));
         cinq.setText("5");
         cinq.setPreferredSize(new java.awt.Dimension(41, 23));
         cinq.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +130,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        six.setBackground(new java.awt.Color(189, 216, 252));
+        six.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        six.setForeground(new java.awt.Color(32, 105, 201));
         six.setText("6");
         six.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +140,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        un.setBackground(new java.awt.Color(189, 216, 252));
+        un.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        un.setForeground(new java.awt.Color(32, 105, 201));
         un.setText("1");
         un.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +150,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        deux.setBackground(new java.awt.Color(189, 216, 252));
+        deux.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        deux.setForeground(new java.awt.Color(32, 105, 201));
         deux.setText("2");
         deux.setPreferredSize(new java.awt.Dimension(41, 23));
         deux.addActionListener(new java.awt.event.ActionListener() {
@@ -114,6 +161,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        trois.setBackground(new java.awt.Color(189, 216, 252));
+        trois.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        trois.setForeground(new java.awt.Color(32, 105, 201));
         trois.setText("3");
         trois.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +171,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        plus.setBackground(new java.awt.Color(189, 216, 252));
+        plus.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        plus.setForeground(new java.awt.Color(32, 105, 201));
         plus.setText("+");
         plus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +181,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        zero.setBackground(new java.awt.Color(189, 216, 252));
+        zero.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        zero.setForeground(new java.awt.Color(32, 105, 201));
         zero.setText("0");
         zero.setPreferredSize(new java.awt.Dimension(41, 23));
         zero.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +192,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        fois.setBackground(new java.awt.Color(189, 216, 252));
+        fois.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        fois.setForeground(new java.awt.Color(32, 105, 201));
         fois.setText("x");
         fois.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,6 +202,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        moins.setBackground(new java.awt.Color(189, 216, 252));
+        moins.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        moins.setForeground(new java.awt.Color(32, 105, 201));
         moins.setText("-");
         moins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,6 +212,9 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        diviser.setBackground(new java.awt.Color(189, 216, 252));
+        diviser.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        diviser.setForeground(new java.awt.Color(32, 105, 201));
         diviser.setText("/");
         diviser.setPreferredSize(new java.awt.Dimension(41, 23));
         diviser.addActionListener(new java.awt.event.ActionListener() {
@@ -158,10 +223,38 @@ public class calculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        egal.setBackground(new java.awt.Color(189, 216, 252));
+        egal.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        egal.setForeground(new java.awt.Color(32, 105, 201));
         egal.setText("=");
+        egal.setDefaultCapable(false);
         egal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 egalActionPerformed(evt);
+            }
+        });
+
+        resultat.setBackground(new java.awt.Color(189, 216, 252));
+        resultat.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        resultat.setForeground(new java.awt.Color(32, 105, 201));
+        resultat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resultat.setAlignmentY(2.0F);
+        resultat.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(189, 216, 252)));
+
+        jTextField2.setEditable(false);
+        jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(32, 105, 201));
+        jTextField2.setText("Result =");
+        jTextField2.setBorder(null);
+
+        jTextField3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(32, 105, 201));
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField3.setText("Calculatrice G2");
+        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(189, 216, 252)));
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
             }
         });
 
@@ -174,51 +267,56 @@ public class calculatorGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(quatre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(un, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(plus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(moins, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(quatre, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(un, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(plus, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(moins, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(deux, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(cinq, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(deux, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(trois, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(fois, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(diviser, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(egal, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(trois, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(sept, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(huit, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fois, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(diviser, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(neuf, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(egal))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cinq, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(resultat, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(operation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(operation, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(resultat, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(sept, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(huit, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(neuf, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(operation, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(operation, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(resultat, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
+                    .addComponent(resultat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sept, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(huit, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -242,12 +340,13 @@ public class calculatorGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(moins, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(diviser, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(egal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(egal)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void septActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_septActionPerformed
         operation.setText(operation.getText() + "7");
         // TODO add your handling code here:
@@ -409,6 +508,10 @@ public class calculatorGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_egalActionPerformed
 
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -451,6 +554,9 @@ public class calculatorGUI extends javax.swing.JFrame {
     private javax.swing.JButton egal;
     private javax.swing.JButton fois;
     private javax.swing.JButton huit;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JButton moins;
     private javax.swing.JButton neuf;
     private javax.swing.JLabel operation;
