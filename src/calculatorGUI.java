@@ -6,6 +6,7 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
+import functionUtils.*;
 
 /**
  *
@@ -319,8 +320,12 @@ public class calculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_moinsActionPerformed
 
     private void egalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_egalActionPerformed
-        operation.setText(operation.getText() + "=");
+        String input = operation.getText();
+        InToPost calcul = new InToPost(input);
+        String output = calcul.calc();
+        resultat.setText(output);
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_egalActionPerformed
 
     /**
