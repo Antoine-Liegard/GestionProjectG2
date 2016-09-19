@@ -26,7 +26,7 @@ public class InToPost {
         theStack = new Stack(stackSize);
     }
 
-    public String doTrans() {
+    public String calc() {
         for (int j = 0; j < input.length(); j++) {
             char ch = input.charAt(j);
             switch (ch) {
@@ -52,36 +52,68 @@ public class InToPost {
         while (!theStack.isEmpty()) {
             output = output + theStack.pop();
         }
-        
-        String array[] = output.split("");
+
+        String array[] = output.split("(?!(^|$))");
         
         ArrayList<String> maListe = new ArrayList<String>();
         
         for (int j = 0;j<array.length;j++) {
             maListe.add(array[j]);
-            System.out.println(array[j]);
         }
-        
+
         ArrayList<String> maListe2 = new ArrayList<String>();
         
-        int j = 0;
+        int k = 0;
         for (int i = 0; i < array.length; i++) {
-            maListe2.add(j,maListe.get(0));
-            maListe.remove(0);
-            j++;
-            if (maListe2.size() == 3) {
-                j = 0;
+            try
+            {
+                Integer.valueOf(maListe.get(0));
+                maListe2.add(k,maListe.get(0));
+                maListe.remove(0);
+                k++;
+                //System.out.println(maListe2);
+            } catch (NumberFormatException e)
+            {
+                int resultat = 0;
+                maListe2.add(k,maListe.get(0));
+                maListe.remove(0);
+                System.out.println(maListe2);
+                k++;
+                System.out.println(k);
+                int operateurGauche = Integer.valueOf(maListe2.get(k-3));
+                maListe2.remove(k-3);
+                --k;
+                int operateurDroite = Integer.valueOf(maListe2.get(k-2));
+                maListe2.remove(k-2);
+                --k;
+                String operande = maListe2.get(k-1);
+                maListe2.remove(k-1);
+                --k;
+                
+                if (operande.equals("*")) {
+                    resultat = operateurGauche * operateurDroite;
+                } else if (operande.equals("+")) {
+                    resultat = operateurGauche + operateurDroite;
+                } else if (operande.equals("/")) {
+                    resultat = operateurGauche / operateurDroite;
+                } else if (operande.equals("-")) {
+                    resultat = operateurGauche - operateurDroite;
+                }
+                
+                maListe2.add(k,String.valueOf(resultat));
+                ++k;
+            }
+            
+            /*if (maListe2.size() == 3) {
+                k = 1;
                 int resultat = 0;
                 int operateurGauche = Integer.valueOf(maListe2.get(0));
-                System.out.println(operateurGauche);
                 maListe2.remove(0);
                 int operateurDroite = Integer.valueOf(maListe2.get(0));
-                System.out.println(operateurDroite);
                 maListe2.remove(0);
                 String operande = maListe2.get(0);
-                System.out.println(operande);
                 maListe2.remove(0);
-
+                
                 if (operande.equals("*")) {
                     resultat = operateurGauche * operateurDroite;
                 } else if (operande.equals("+")) {
@@ -94,9 +126,9 @@ public class InToPost {
                 
                 maListe2.add(String.valueOf(resultat));
             }
+        }*/
         }
-
-        return output;//maListe2.get(0);
+        return maListe2.get(0);
     }
 
     public void gotOper(char opThis, int prec1) {

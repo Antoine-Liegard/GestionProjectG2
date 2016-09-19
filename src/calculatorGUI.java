@@ -144,7 +144,7 @@ public class calculatorGUI extends javax.swing.JFrame {
         String input = operation.getText();
         String output;
         InToPost theTrans = new InToPost(input);
-        output = theTrans.doTrans(); 
+        output = theTrans.calc(); 
         result.setText(output);
     }//GEN-LAST:event_egalActionPerformed
 
