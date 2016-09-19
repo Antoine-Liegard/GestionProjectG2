@@ -254,8 +254,31 @@ public class calculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_septActionPerformed
 
     private void diviserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diviserActionPerformed
-        operation.setText(operation.getText() + "/");
+        String recup = operation.getText();
+        char last_insert = recup.charAt(recup.length()-1) ;
+        switch (last_insert) {
+            case '+' : 
+                recup = recup.substring(0, recup.length()-1) + "/" ;
+                operation.setText (recup);
+            break;
+            case '-' : 
+                recup = recup.substring(0, recup.length()-1) + "/" ;
+                operation.setText (recup);
+            break;
+            case '*' : 
+                recup = recup.substring(0, recup.length()-1) + "/" ;
+                operation.setText (recup);
+            break;
+            case '/' : 
+                recup = recup.substring(0, recup.length()-1) + "/" ;
+                operation.setText (recup);
+            break;
+            default :
+                operation.setText(operation.getText() + "/");
+        }
+        
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_diviserActionPerformed
 
     private void huitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_huitActionPerformed
@@ -299,7 +322,28 @@ public class calculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_troisActionPerformed
 
     private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
-        operation.setText(operation.getText() + "+");
+        String recup = operation.getText();
+        char last_insert = recup.charAt(recup.length()-1) ;
+        switch (last_insert) {
+            case '+' : 
+                recup = recup.substring(0, recup.length()-1) + "+" ;
+                operation.setText (recup);
+            break;
+            case '-' : 
+                recup = recup.substring(0, recup.length()-1) + "+" ;
+                operation.setText (recup);
+            break;
+            case '*' : 
+                recup = recup.substring(0, recup.length()-1) + "+" ;
+                operation.setText (recup);
+            break;
+            case '/' : 
+                recup = recup.substring(0, recup.length()-1) + "+" ;
+                operation.setText (recup);
+            break;
+            default :
+                operation.setText(operation.getText() + "+");
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_plusActionPerformed
 
@@ -309,12 +353,54 @@ public class calculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_zeroActionPerformed
 
     private void foisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foisActionPerformed
-        operation.setText(operation.getText() + "*");
+        String recup = operation.getText();
+        char last_insert = recup.charAt(recup.length()-1) ;
+        switch (last_insert) {
+            case '+' : 
+                recup = recup.substring(0, recup.length()-1) + "*" ;
+                operation.setText (recup);
+            break;
+            case '-' : 
+                recup = recup.substring(0, recup.length()-1) + "*" ;
+                operation.setText (recup);
+            break;
+            case '*' : 
+                recup = recup.substring(0, recup.length()-1) + "*" ;
+                operation.setText (recup);
+            break;
+            case '/' : 
+                recup = recup.substring(0, recup.length()-1) + "*" ;
+                operation.setText (recup);
+            break;
+            default :
+                operation.setText(operation.getText() + "*");
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_foisActionPerformed
 
     private void moinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moinsActionPerformed
-        operation.setText(operation.getText() + "-");
+        String recup = operation.getText();
+        char last_insert = recup.charAt(recup.length()-1) ;
+        switch (last_insert) {
+            case '+' : 
+                recup = recup.substring(0, recup.length()-1) + "-" ;
+                operation.setText (recup);
+            break;
+            case '-' : 
+                recup = recup.substring(0, recup.length()-1) + "-" ;
+                operation.setText (recup);
+            break;
+            case '*' : 
+                recup = recup.substring(0, recup.length()-1) + "-" ;
+                operation.setText (recup);
+            break;
+            case '/' : 
+                recup = recup.substring(0, recup.length()-1) + "-" ;
+                operation.setText (recup);
+            break;
+            default :
+                operation.setText(operation.getText() + "-");
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_moinsActionPerformed
 
@@ -378,3 +464,4 @@ public class calculatorGUI extends javax.swing.JFrame {
     private javax.swing.JButton zero;
     // End of variables declaration//GEN-END:variables
 }
+
